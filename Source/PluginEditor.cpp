@@ -44,7 +44,7 @@ SimpleEQAudioProcessorEditor::~SimpleEQAudioProcessorEditor()
     const auto& params = audioProcessor.getParameters();
     for (auto param : params)
     {
-        param->addListener(this);
+        param->removeListener(this);
     }
 }
 
